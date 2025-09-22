@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Backend Mastery with Node.js",
+    "description": "Build robust RESTful APIs using Express, MongoDB, and Mongoose.",
+    "instructor": "Alice Johnson",
+    "createdAt": "2025-07-25T19:00:00Z",
+    "price": 3499,
+    "image": "https://images.unsplash.com/photo-1605902711622-cfb43c4437f9",
+    "level": "Intermediate",
+    "rating": 4.7
+  },
+  {
+    "title": "Advanced Express Patterns",
+    "description": "Dive deep into routing, middleware architecture, and modular structuring.",
+    "instructor": "Bob Smith",
+    "createdAt": "2025-07-20T14:30:00Z",
+    "price": 2999,
+    "image": "https://images.unsplash.com/photo-1581090700227-1e8b5f83d39d",
+    "level": "Advanced",
+    "rating": 4.3
+  },
+  {
+    "title": "MongoDB Aggregation Framework",
+    "description": "Master data analytics and transformation using MongoDB pipelines.",
+    "instructor": "Catherine Lee",
+    "createdAt": "2025-07-22T16:00:00Z",
+    "price": 2599,
+    "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296",
+    "level": "Advanced",
+    "rating": 4.8
+  },
+  {
+    "title": "Intro to API Security",
+    "description": "Learn best practices in securing RESTful APIs with JWT and OAuth2.",
+    "instructor": "Daniel Martin",
+    "createdAt": "2025-07-18T09:15:00Z",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1606925797303-5253a57d8b38",
+    "level": "Beginner",
+    "rating": 4.1
+  }
+]

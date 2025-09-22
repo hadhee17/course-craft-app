@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Intro to Express",
+    "courseTitle": "Backend Mastery with Node.js",
+    "sequence": 1
+  },
+  {
+    "title": "Middleware Mastery",
+    "courseTitle": "Advanced Express Patterns",
+    "sequence": 1
+  },
+  {
+    "title": "Routing Deep Dive",
+    "courseTitle": "Advanced Express Patterns",
+    "sequence": 2
+  },
+  {
+    "title": "Aggregation Basics",
+    "courseTitle": "MongoDB Aggregation Framework",
+    "sequence": 1
+  },
+  {
+    "title": "Pipeline Operators in Depth",
+    "courseTitle": "MongoDB Aggregation Framework",
+    "sequence": 2
+  },
+  {
+    "title": "API Security Basics",
+    "courseTitle": "Intro to API Security",
+    "sequence": 1
+  },
+  {
+    "title": "JWT & OAuth2 Explained",
+    "courseTitle": "Intro to API Security",
+    "sequence": 2
+  }
+]

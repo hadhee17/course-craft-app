@@ -1,0 +1,44 @@
+[
+  {
+    "title": "What is Express.js?",
+    "moduleTitle": "Intro to Express",
+    "content": "Overview of Express and its role in backend development.",
+    "duration": 15
+  },
+  {
+    "title": "Writing Custom Middleware",
+    "moduleTitle": "Middleware Mastery",
+    "content": "Learn how to intercept requests and compose logic cleanly.",
+    "duration": 20
+  },
+  {
+    "title": "Route Parameters & Query Strings",
+    "moduleTitle": "Routing Deep Dive",
+    "content": "Master dynamic routing and parsing user inputs.",
+    "duration": 25
+  },
+  {
+    "title": "Understanding Aggregation Pipelines",
+    "moduleTitle": "Aggregation Basics",
+    "content": "Learn the purpose of aggregation pipelines in MongoDB.",
+    "duration": 18
+  },
+  {
+    "title": "Using $match, $group, and $project",
+    "moduleTitle": "Pipeline Operators in Depth",
+    "content": "Explore essential pipeline stages with practical examples.",
+    "duration": 22
+  },
+  {
+    "title": "Introduction to API Security Concepts",
+    "moduleTitle": "API Security Basics",
+    "content": "Understand the risks and foundations of securing APIs.",
+    "duration": 17
+  },
+  {
+    "title": "Implementing JWT Authentication",
+    "moduleTitle": "JWT & OAuth2 Explained",
+    "content": "Step-by-step guide to protecting routes using JWTs.",
+    "duration": 30
+  }
+]
