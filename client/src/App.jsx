@@ -12,12 +12,9 @@ import Footer from "./components/Footer";
 
 // Create a wrapper component that handles auth checking
 function AppContent() {
-  const { checkAuthStatus } = useAuth();
+  const { loading } = useAuth();
 
-  // Check auth status when the app loads
-  React.useEffect(() => {
-    checkAuthStatus();
-  }, [checkAuthStatus]);
+  if (loading) return <div className="text-center mt-20">Loading...</div>;
 
   return (
     <div className="min-h-screen flex flex-col">

@@ -13,39 +13,33 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    checkAuthStatus();
-  }, []);
+    const fetchUser = async () => {
+      try {
+        const user = await getCurrentUser(); // fetches with cookie JWT
+        setCurrentUser(user);
+      } catch (error) {
+        setCurrentUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  async function checkAuthStatus() {
-    try {
-      const user = await getCurrentUser();
-      setCurrentUser(user);
-    } catch (error) {
-      setCurrentUser(null);
-    } finally {
-      setLoading(false);
-    }
-  }
+    fetchUser();
+  }, []); // only runs once on mount
 
-  async function logout() {
+  const logout = async () => {
     try {
       await logoutUser();
       setCurrentUser(null);
     } catch (error) {
       console.error("Logout error:", error);
     }
-  }
-
-  const value = {
-    currentUser,
-    setCurrentUser,
-    logout,
-    loading,
-    checkAuthStatus, // Export this function to manually trigger auth check
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider
+      value={{ currentUser, setCurrentUser, logout, loading }}
+    >
       {!loading && children}
     </AuthContext.Provider>
   );

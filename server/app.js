@@ -10,10 +10,12 @@ const cors = require('cors');
 const passport = require('./config/passport');
 const session = require('express-session');
 const authRoutes = require('./routes/userRoute');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 //cors config
 const allowedOrigins = [
