@@ -8,9 +8,12 @@ dotenv.config({ path: './config/config.env' });
 
 const port = process.env.PORT || 8000;
 
-const connectToDB = async () => {
-  await connectDB();
-};
-connectToDB();
-
-app.listen(port, () => console.log(`app running in port ${port}`));
+(async function start() {
+  try {
+    await connectDB(); // wait for DB connection
+    app.listen(port, () => console.log(`app running on port ${port}`));
+  } catch (err) {
+    console.error('Failed to start server:', err);
+    process.exit(1);
+  }
+})();
