@@ -44,6 +44,10 @@ app.use('/api/v1/course', lessonRouter);
 //user route
 app.use('/api/v1/users', userRouter);
 
+app.use('/', (req, res) => {
+  res.send('API is running....');
+});
+
 app.all('/*catchall', (req, res, next) => {
   next(new AppError(`cant find ${req.originalUrl} on the server`, 404));
 });

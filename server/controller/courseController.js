@@ -120,7 +120,10 @@ exports.updateCourse = async (req, res, next) => {
       data: { updatedCourse },
     });
   } catch (error) {
-    next(error);
+    res.status(400).json({
+      status: 'fail',
+      message: error.message,
+    });
   }
 };
 
@@ -156,7 +159,10 @@ exports.getTopRated = async (req, res, next) => {
       },
     });
   } catch (error) {
-    next(error);
+    res.status(400).json({
+      status: 'fail',
+      message: error.message,
+    });
   }
 };
 

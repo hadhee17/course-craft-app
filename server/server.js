@@ -8,10 +8,6 @@ dotenv.config({ path: './config.env' });
 
 const port = process.env.PORT || 8000;
 
-app.use('/', (req, res) => {
-  res.send('API is running....');
-});
-
 (async function start() {
   try {
     await connectDB(); // wait for DB connection
