@@ -16,7 +16,9 @@ exports.googleCallback = (req, res, next) => {
   passport.authenticate('google', { session: false }, async (err, user) => {
     if (err || !user) {
       console.error('OAuth error:', err);
-      return res.redirect('http://localhost:5173/login?error=oauth_failed'); // optional query param
+      return res.redirect(
+        `${process.env.FRONTEND_URL}/login?error=oauth_failed`,
+      ); // optional query param
     }
 
     try {
@@ -39,10 +41,12 @@ exports.googleCallback = (req, res, next) => {
         }),
       );
 
-      return res.redirect(`http://localhost:5173/`); // front page
+      return res.redirect(`${process.env.FRONTEND_URL}/`); // front page
     } catch (error) {
       console.error('Post-login error:', error);
-      return res.redirect('http://localhost:5173/login?error=server_error');
+      return res.redirect(
+        `${process.env.FRONTEND_URL}/login?error=server_error`,
+      );
     }
   })(req, res, next);
 };
