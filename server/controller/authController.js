@@ -17,7 +17,7 @@ exports.googleCallback = (req, res, next) => {
     if (err || !user) {
       console.error('OAuth error:', err);
       return res.redirect(
-        `${process.env.FRONTEND_URL}/login?error=oauth_failed`,
+        'https://course-hub-app.vercel.app/login?error=oauth_failed',
       ); // optional query param
     }
 
@@ -41,11 +41,11 @@ exports.googleCallback = (req, res, next) => {
         }),
       );
 
-      return res.redirect(`${process.env.FRONTEND_URL}/`); // front page
+      return res.redirect(`https://course-hub-app.vercel.app/`); // front page
     } catch (error) {
       console.error('Post-login error:', error);
       return res.redirect(
-        `${process.env.FRONTEND_URL}/login?error=server_error`,
+        'https://course-hub-app.vercel.app/login?error=server_error',
       );
     }
   })(req, res, next);
