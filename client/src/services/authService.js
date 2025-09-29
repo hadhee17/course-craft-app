@@ -27,5 +27,5 @@ export async function logoutUser() {
 
 // ✅ Start Google OAuth (redirects to backend)
 export function loginWithGoogle() {
-  window.location.href = "http://localhost:3000/api/v1/users/google";
+  window.location.href = `${import.meta.env.VITE_BASE_URL}/users/google`;
 }
