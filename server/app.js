@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 //cors config
 const allowedOrigins = [
-  'https://course-hub-app-backend.vercel.app',
+  'https://course-hub-app.vercel.app',
   'http://localhost:5173', // local Vite dev server
   // deployed frontend
 ];
