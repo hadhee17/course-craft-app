@@ -37,10 +37,7 @@
 
 ---
 
-## 📁 Folder Structure
-ChatGPT said:
 
-Perfect! Here’s an upgraded fancy GitHub README for your CourseHub project with badges and extra styling. You can paste it directly into your repository.
 
 # CourseHub - Course Management API
 
