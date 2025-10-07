@@ -28,9 +28,9 @@ exports.googleCallback = (req, res, next) => {
       // Set cookie
       res.cookie('jwt', token, {
         httpOnly: true,
-        // secure: false,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        secure: true,
+        // secure: process.env.NODE_ENV === 'production',
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60 * 1000,
       });
       // Redirect with user info in query params
@@ -80,9 +80,9 @@ exports.signup = async (req, res, next) => {
 
     res.cookie('jwt', token, {
       httpOnly: true,
-      // secure: false,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      secure: true,
+      // secure: process.env.NODE_ENV === 'production',
+      sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
@@ -117,8 +117,9 @@ exports.login = async (req, res, next) => {
     res.cookie('jwt', token, {
       httpOnly: true,
 
-      secure: false,
-      sameSite: 'lax',
+      // secure: false,
+      secure: true,
+      sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     console.log('JWT cookie set:', res.getHeader('Set-Cookie'));
