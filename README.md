@@ -12,6 +12,10 @@
 
 **CourseHub** is a modular course management API built with **Node.js**, **Express**, and **MongoDB**, designed to manage **courses**, **modules**, and **lessons** efficiently. It supports secure user authentication, role-based access control, and media uploads via **Cloudinary**.
 
+**Test the App With Demo login Credential**
+**Email**:test@gmail.com
+**Pass**:pass1234
+
 ---
 
 ## ✨ Features
